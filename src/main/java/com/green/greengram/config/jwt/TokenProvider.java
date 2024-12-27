@@ -96,4 +96,14 @@ public class TokenProvider {
         return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload();
     }
 
+
+    public boolean validToken(String token) {
+        try {
+            getClaims(token); // 내부적으로 서명 및 만료 검증
+            return true; // 검증 통과
+        } catch (Exception e) {
+            return false; // 검증 실패
+        }
+    }
+
 }
