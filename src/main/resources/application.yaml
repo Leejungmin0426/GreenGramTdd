@@ -1,5 +1,7 @@
 mybatis:
   mapper-locations: mappers/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true #snake_case column명을 자동으로 camel_case형으로 변환
 
 
 file:
@@ -29,6 +31,8 @@ spring:
       max-file-size: 15MB
   jackson:
     default-property-inclusion: non-null #응답 JSON을 만들 때 null인 속성은 제외
+
+
 
 
 springdoc:

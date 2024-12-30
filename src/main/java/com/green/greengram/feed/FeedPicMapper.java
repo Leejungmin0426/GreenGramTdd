@@ -12,7 +12,7 @@ import java.util.List;
 public interface FeedPicMapper {
     int insFeedPic(FeedPicDto p);
     int insFeedPic2 (FeedPicDto p);
-    List<String> selFeedPic (long feedId);
+    List<String> selFeedPicList (long feedId);
     List<FeedPicSel> selFeedPicListByFeedIds (List<Long> feedIds);
 
 }

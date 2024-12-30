@@ -95,7 +95,7 @@ public class FeedService {
         for (int i = 0; i < list.size(); i++) {
             FeedGetRes item = list.get(i);
             //피드 당 사진 리스트
-            item.setPics(feedPicMapper.selFeedPic(item.getFeedId()));
+            item.setPics(feedPicMapper.selFeedPicList(item.getFeedId()));
 
 //            for (FeedGetRes item : list) {
 //                // 피드 당 사진 리스트 설정

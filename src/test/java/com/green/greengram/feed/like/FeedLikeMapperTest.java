@@ -1,16 +1,19 @@
 package com.green.greengram.feed.like;
 
 
+import com.green.greengram.TestUtils;
 import com.green.greengram.feed.like.model.FeedLikeReq;
+import com.green.greengram.feed.like.model.FeedLikeVo;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.dao.DuplicateKeyException;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,6 +28,10 @@ class FeedLikeMapperTest {
 
     @Autowired //스프링 컨테이너가 DI해 주는 게 맞음
     private FeedLikeMapper feedLikeMapper; //필드 주입 방식의 DI가 된다.
+
+
+    @Autowired
+    FeedLikeTestMapper feedLikeTestMapper;
 
     static final long FEED_ID_1 = 1L;
     static final long FEED_ID_5 = 5L;
@@ -66,24 +73,26 @@ class FeedLikeMapperTest {
     }
 
     @Test
-    void insFeedLikeNormal() {
-        //given
-        FeedLikeReq givenParam = new FeedLikeReq();
-        givenParam.setFeedId(FEED_ID_5);
-        givenParam.setUserId(USER_ID_2);
+    void insFeedLike() {
 
         //when
-        int actualAffectedRows = 0;
-        try {
-            actualAffectedRows = feedLikeMapper.insFeedLike(notExistedData);
-        } catch (Exception e) {
-            //then: 예외 메시지 검증
-            assertTrue(e.getMessage().contains("expected error message"), "예외 메시지가 예상과 다릅니다.");
-            return; // 테스트 종료 (예외 검증이 완료되었으므로)
-        }
+        List<FeedLikeVo> actualFeedLikeListBefore = feedLikeTestMapper.selFeedLikeAll(); // insert 전 기존 튜플 수
+        FeedLikeVo actualFeedLikeVoBefore = feedLikeTestMapper.selFeedLikeByFeedIdAndUserId(notExistedData); // insert 전 WHERE절에 PK로 데이터를 가져옴, notExitedData는 PK값 다 가져옴
+        int actualAffectedRows = feedLikeMapper.insFeedLike(notExistedData);
+
+        FeedLikeVo actualFeedLikeVoAfter = feedLikeTestMapper.selFeedLikeByFeedIdAndUserId(notExistedData);// insert 후 WHERE절에 PK로 데이터를 가져옴
+        List<FeedLikeVo> actualFeedLikeListAfter = feedLikeTestMapper.selFeedLikeAll(); // insert 후 튜플 수
 
         //then: 예외가 없었을 경우 정상 처리 확인
-        assertEquals(1, actualAffectedRows, "insert 문제 발생");
+        assertAll(
+                  () -> TestUtils.assertCurrentTimeStamp(actualFeedLikeVoAfter.getCreatedAt()) //특정 객체의 createdAt 값이 현재 시간과 가까운지(정확히는 1초 이내 차이인지) 검증
+                , () -> assertEquals(actualFeedLikeListBefore.size() + 1, actualFeedLikeListAfter.size())
+                , () -> assertNull(actualFeedLikeVoBefore)// 내가 insert 하려고 하는 데이터가 없었는지 단언, 없었으면 실패했을 것
+                , () -> assertNotNull(actualFeedLikeVoAfter) // 실제 insert거 내가 원하는 데이터로 되었는지 단언. 여기까지만 해도 됐지만 밑의 코드를 추가하므로써 더블체크, 확인사살
+                , () -> assertEquals(1, actualAffectedRows)
+                , () -> assertEquals(notExistedData.getFeedId(), actualFeedLikeVoAfter.getFeedId()) // 내가 원하는 데이터로 insert되었는지 더블확인. 빼도 됨..
+                , () -> assertEquals(notExistedData.getUserId(), actualFeedLikeVoAfter.getUserId()) // 내가 원하는 데이터로 insert되었는지 더블확인. 빼도 됨..
+        );
     }
 
     @Test
@@ -97,10 +106,31 @@ class FeedLikeMapperTest {
         assertEquals(0, actualAffectedRows);
     }
 
+    @Test
+    void delFeedLikeDuplicateDataThrowDuplicateKeyException() {
+
+        assertThrows(DuplicateKeyException.class, () -> {
+            feedLikeMapper.delFeedLike(existedData);
+        }, "데이터 중복시 에러 발생되지 않음> primary key(feed_id, user_id) 확인 바람");
+    }
+
 
     @Test
-    void delFeedLikeNormal() {
+    void delFeedLike() {
+        FeedLikeVo actualFeedLikeVoBefore = feedLikeTestMapper.selFeedLikeByFeedIdAndUserId(existedData); // 현재 존재하는 튜플이다 - existedData, 없는 데이터다 notExistedData
         int actualAffectedRows = feedLikeMapper.delFeedLike(existedData);
-        assertEquals(1, actualAffectedRows);
+
+        FeedLikeVo actualFeedLikeVoAfter = feedLikeTestMapper.selFeedLikeByFeedIdAndUserId(existedData);// insert 후 WHERE절에 PK로 데이터를 가져옴
+
+
+        //then: 예외가 없었을 경우 정상 처리 확인
+        assertAll(
+                  () -> assertEquals(1, actualAffectedRows)
+                , () -> assertNotNull(actualFeedLikeVoBefore)
+                , () -> assertNull(actualFeedLikeVoAfter)
+        );
     }
+
 }
+
+
