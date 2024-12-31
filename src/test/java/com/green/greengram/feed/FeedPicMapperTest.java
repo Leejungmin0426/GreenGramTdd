@@ -1,7 +1,9 @@
 package com.green.greengram.feed;
 
+import com.green.greengram.TestUtils;
 import com.green.greengram.feed.model.FeedPicDto;
 import com.green.greengram.feed.model.FeedPicVo;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.MyBatisSystemException;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
@@ -61,6 +63,7 @@ class FeedPicMapperTest {
     }
 
     @Test
+    @DisplayName("중복된 데이터 입력시 DuplicateKeyException 발생 체크")
     void insFeedPicLongPicsStringLengthThrowException() {
         FeedPicDto givenParam = new FeedPicDto();
         givenParam.setFeedId(1L);
@@ -87,27 +90,54 @@ class FeedPicMapperTest {
         int actualAffectedRows = feedPicMapper.insFeedPic(givenParam);
         List<FeedPicVo> feedPicListAfter = feedPicTestMapper.selFeedPicListByFeedId(givenParam.getFeedId());
 
+        //feedPicListAfter에서 pic만 뽑아내서 이전처럼 List<String>변형한 다음 체크한다.
+        List<String> feedOnlyPicList = new ArrayList<>(feedPicListAfter.size());
+        for(FeedPicVo feedPicVo : feedPicListAfter) {
+            feedOnlyPicList.add(feedPicVo.getPic());
+        }
+
+
+        //스트림 이용해서 한다.
         List<String> picList = Arrays.asList(pics);
         for(int i=0; i<pics.length; i++) {
             String pic = picList.get(i);
-            System.out.printf("%s - contains: %b\n", pic, feedPicListAfter.contains(pic));
+            System.out.printf("%s - contains: %b\n", pic, feedOnlyPicList.contains(pic));
         }
-        assertAll(
-                () -> {
 
+        //Predicate 리턴타입 O (boolean), 파라미터 O (FeedPicVo)
+        String[] pics2 = { "a.jpg", "b.jpg", "c.jpg", "d.jpg" };
+        List<String> picList2 = Arrays.asList(pics2);
+        feedPicListAfter.stream().allMatch(feedPicVo -> picList2.contains(feedPicVo.getPic()));
+
+        assertAll(
+                () -> feedPicListAfter.forEach(feedPicVo -> TestUtils.assertCurrentTimeStamp(feedPicVo.getCreatedAt()))
+                , () -> {
+                    for(FeedPicVo feedPicVo : feedPicListAfter) {
+                        TestUtils.assertCurrentTimeStamp(feedPicVo.getCreatedAt());
+                    }
                 }
                 , () -> assertEquals(givenParam.getPics().size(), actualAffectedRows)
                 , () -> assertEquals(0, feedPicListBefore.size())
                 , () -> assertEquals(givenParam.getPics().size(), feedPicListAfter.size())
-                , () -> assertTrue(feedPicListAfter.containsAll(Arrays.asList(pics)))
+                , () -> assertTrue(feedOnlyPicList.containsAll(Arrays.asList(pics)))
+                , () -> assertTrue(Arrays.asList(pics).containsAll(feedOnlyPicList))
+                , () -> assertTrue(feedPicListAfter.stream().allMatch(feedPicVo -> picList.contains(feedPicVo.getPic())))
+
+                , () -> assertTrue(feedPicListAfter.stream() //스트림 생성 Stream<FeedPicVo>
+                        .map(FeedPicVo::getPic) //똑같은 크기의 새로운 반환 Stream<String> ["a.jpg", "b.jpg", "c.jpg"]
+                        .filter(pic -> picList.contains(pic)) //필터는 연산의 결과가 true인 것만 뽑아내서 새로운 스트림 반환 Stream<String> ["a.jpg", "b.jpg", "c.jpg"]
+                        .limit(picList.size()) // 스트림 크기를 제한, 이전 스트림의 크기가 10개인데 limit(2)를 하면 2개짜리 스트림이 반환된다.
+                        .count() == picList.size())
+                // FeedPicVo::getPic 메소드 참조
+                , () -> assertTrue(feedPicListAfter.stream().map(FeedPicVo::getPic).toList().containsAll(Arrays.asList(pics)))
+
+                //Function return type O (String), parameter O (FeedPicVo)
+                , () -> assertTrue(feedPicListAfter.stream().map(feedPicVo -> feedPicVo.getPic()) // ["a.jpg", "b.jpg", "c.jpg"]
+                        .toList() //스트림 > List
+                        .containsAll(Arrays.asList(pics)))
         );
 
         //created_at 단언
 
     }
-
 }
-
-
-
-

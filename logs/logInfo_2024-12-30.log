@@ -1,0 +1,1265 @@
+[2024-12-30 11:05:33 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 11:05:33 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 10096 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 11:05:33 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 11:05:34 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 1.104 seconds (process running for 2.021)
+[2024-12-30 11:05:34 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 11:05:34 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@70881123
+[2024-12-30 11:05:34 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 11:05:35 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 11:05:35 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:05:35 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:05:35 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 11:05:35 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_like
+        SET feed_id = 5
+        , user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:05:35 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:05:35 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|5       |2       |2024-12-30 11:05:35 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:05:35 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 11:05:35 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|5       |2       |2024-12-30 11:05:35 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:05:35 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 11:05:35 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 11:41:26 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 11:41:26 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 5428 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 11:41:26 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 11:41:26 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.963 seconds (process running for 1.813)
+[2024-12-30 11:41:26 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 11:41:26 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@17c4dc5b
+[2024-12-30 11:41:26 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 11:41:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 11:41:27 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:41:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:41:27 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 11:41:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_like
+        SET feed_id = 5
+        , user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:41:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:41:27 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|5       |2       |2024-12-30 11:41:27 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:41:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 11:41:27 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|5       |2       |2024-12-30 11:41:27 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:41:27 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 11:41:27 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 11:47:15 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 11:47:15 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 9692 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 11:47:15 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 11:47:16 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.96 seconds (process running for 1.809)
+[2024-12-30 11:47:16 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 11:47:16 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4a2bf50f
+[2024-12-30 11:47:16 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 11:47:16 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 11:47:16 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:47:16 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:47:16 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 11:47:16 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_like
+        SET feed_id = 5
+        , user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:47:16 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 11:47:16 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|5       |2       |2024-12-30 11:47:17 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:47:16 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 11:47:16 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|5       |2       |2024-12-30 11:47:17 |
+|--------|--------|--------------------|
+
+[2024-12-30 11:47:17 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 11:47:17 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:01:06 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:01:06 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 948 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:01:06 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:01:07 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.968 seconds (process running for 1.819)
+[2024-12-30 12:01:07 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:01:07 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7d0cd23c
+[2024-12-30 12:01:07 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:01:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 12:01:08 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:01:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:01:08 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 12:01:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_like
+        SET feed_id = 5
+        , user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:01:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:01:08 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|5       |2       |2024-12-30 12:01:08 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:01:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 12:01:08 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|5       |2       |2024-12-30 12:01:08 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:01:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:01:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:01:12 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:01:12 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 6092 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:01:12 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:01:12 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.961 seconds (process running for 1.836)
+[2024-12-30 12:01:12 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:01:12 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5785e813
+[2024-12-30 12:01:12 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:01:13 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 12:01:13 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:01:13 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:01:13 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 12:01:13 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_like
+        SET feed_id = 5
+        , user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:01:13 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:01:13 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|5       |2       |2024-12-30 12:01:13 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:01:13 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 12:01:13 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|5       |2       |2024-12-30 12:01:13 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:01:13 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:01:13 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:05:14 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:05:14 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 4372 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:05:14 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:05:15 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.945 seconds (process running for 1.799)
+[2024-12-30 12:05:15 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:05:15 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6d294ddc
+[2024-12-30 12:05:15 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:05:15 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE FROM feed_like
+        WHERE feed_id = 1 AND user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:05:15 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:05:15 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:15:33 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:15:33 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 4160 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:15:33 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:15:34 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.946 seconds (process running for 1.794)
+[2024-12-30 12:15:34 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:15:34 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@fddd7ae
+[2024-12-30 12:15:34 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:15:35 WARN Test worker] [org.mariadb.jdbc.message.server.ErrorPacket] Error: 1064-42000: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM feed_like WHERE  feed_id = null And user_id = null' at line 1
+[2024-12-30 12:15:35 ERRORTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE * FROM feed_like WHERE  feed_id = NULL And user_id = NULL
+ {FAILED after 0 msec}
+java.sql.SQLSyntaxErrorException: (conn=64) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM feed_like WHERE  feed_id = null And user_id = null' at line 1
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.delete(DefaultSqlSession.java:212)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy3/jdk.proxy3.$Proxy81.delete(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.delete(SqlSessionTemplate.java:304)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:72)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy86.delFeedLikeAll(Unknown Source)
+	at com.green.greengram.feed.like.FeedLikeMapperTest.delFeedLikeNormal(FeedLikeMapperTest.java:120)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2024-12-30 12:15:35 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:15:35 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:16:42 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:16:42 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 2740 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:16:42 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:16:43 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.97 seconds (process running for 1.819)
+[2024-12-30 12:16:43 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:16:43 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@252ec02e
+[2024-12-30 12:16:43 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:16:44 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            1, 'a.jpg'
+         ),( 
+            1, 'b.jpg'
+         ),( 
+            1, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 12:16:44 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:16:44 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:16:53 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:16:53 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 1836 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:16:53 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:16:53 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.955 seconds (process running for 1.815)
+[2024-12-30 12:16:53 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:16:54 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@22791b75
+[2024-12-30 12:16:54 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:16:54 WARN Test worker] [org.mariadb.jdbc.message.server.ErrorPacket] Error: 1064-42000: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM feed_like' at line 1
+[2024-12-30 12:16:54 ERRORTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE * FROM feed_like
+ {FAILED after 0 msec}
+java.sql.SQLSyntaxErrorException: (conn=84) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM feed_like' at line 1
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.delete(DefaultSqlSession.java:212)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy3/jdk.proxy3.$Proxy81.delete(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.delete(SqlSessionTemplate.java:304)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:72)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy86.delFeedLikeAll(Unknown Source)
+	at com.green.greengram.feed.like.FeedLikeMapperTest.delFeedLikeNormal(FeedLikeMapperTest.java:120)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2024-12-30 12:16:54 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:16:54 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:26:21 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:26:21 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 10636 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:26:21 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:26:22 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.968 seconds (process running for 1.83)
+[2024-12-30 12:26:22 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:26:22 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4837f97e
+[2024-12-30 12:26:22 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:26:22 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 12:26:22 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:26:22 WARN Test worker] [org.mariadb.jdbc.message.server.ErrorPacket] Error: 1064-42000: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM feed_like WHERE  feed_id = 5 And user_id = 2' at line 1
+[2024-12-30 12:26:22 ERRORTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE * FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {FAILED after 0 msec}
+java.sql.SQLSyntaxErrorException: (conn=94) You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM feed_like WHERE  feed_id = 5 And user_id = 2' at line 1
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:172)
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:915)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:854)
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:773)
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:697)
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:93)
+	at org.mariadb.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:276)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.delete(DefaultSqlSession.java:212)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy3/jdk.proxy3.$Proxy81.delete(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.delete(SqlSessionTemplate.java:304)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:72)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy86.delFeedLikeByFeedIdAndUserId(Unknown Source)
+	at com.green.greengram.feed.like.FeedLikeMapperTest.delFeedLikeNormal(FeedLikeMapperTest.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2024-12-30 12:26:22 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:26:22 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:31:37 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:31:37 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 10756 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:31:37 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:31:38 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.946 seconds (process running for 1.802)
+[2024-12-30 12:31:38 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:31:38 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@fddd7ae
+[2024-12-30 12:31:38 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:31:39 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like
+ {executed in 0 msec}
+[2024-12-30 12:31:39 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|2       |1       |2024-11-01 10:10:02 |
+|3       |2       |2024-11-01 10:10:03 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:31:39 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE FROM feed_like WHERE  feed_id = 5 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:31:39 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:31:39 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:38:24 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:38:24 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 10788 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:38:24 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:38:25 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.939 seconds (process running for 1.783)
+[2024-12-30 12:38:25 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:38:25 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@70881123
+[2024-12-30 12:38:25 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:38:25 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:38:25 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:38:25 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE FROM feed_like
+        WHERE feed_id = 5 AND user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:38:25 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:38:25 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:38:25 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:38:25 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:40:29 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:40:29 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 3368 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:40:29 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:40:30 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.94 seconds (process running for 1.788)
+[2024-12-30 12:40:30 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:40:30 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@50bc3219
+[2024-12-30 12:40:30 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:40:30 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:40:30 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:40:30 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE FROM feed_like
+        WHERE feed_id = 5 AND user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:40:30 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:40:30 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:40:30 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:40:30 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:42:02 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:42:02 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 1928 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:42:02 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:42:03 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.938 seconds (process running for 1.78)
+[2024-12-30 12:42:03 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:42:03 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@64f4f12
+[2024-12-30 12:42:03 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:42:03 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:42:03 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:42:03 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE FROM feed_like
+        WHERE feed_id = 1 AND user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:42:03 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:42:03 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 12:42:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:42:03 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:42:17 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:42:17 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 1804 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:42:17 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:42:18 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.938 seconds (process running for 1.781)
+[2024-12-30 12:42:18 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:42:18 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5785e813
+[2024-12-30 12:42:18 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:42:18 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:42:18 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:42:18 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE FROM feed_like
+        WHERE feed_id = 1 AND user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:42:18 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:42:18 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 12:42:18 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:42:18 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:43:20 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:43:20 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Starting FeedLikeMapperTest using Java 17.0.12 with PID 8396 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:43:20 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:43:21 INFO Test worker] [com.green.greengram.feed.like.FeedLikeMapperTest] Started FeedLikeMapperTest in 0.98 seconds (process running for 1.837)
+[2024-12-30 12:43:21 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:43:21 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@599f1b7
+[2024-12-30 12:43:21 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:43:22 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:43:22 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|--------------------|
+|feed_id |user_id |created_at          |
+|--------|--------|--------------------|
+|1       |2       |2024-11-01 10:10:01 |
+|--------|--------|--------------------|
+
+[2024-12-30 12:43:22 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. DELETE FROM feed_like
+        WHERE feed_id = 1 AND user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:43:22 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT * FROM feed_like WHERE  feed_id = 1 And user_id = 2
+ {executed in 0 msec}
+[2024-12-30 12:43:22 INFO Test worker] [jdbc.resultsettable] 
+|--------|--------|-----------|
+|feed_id |user_id |created_at |
+|--------|--------|-----------|
+|--------|--------|-----------|
+
+[2024-12-30 12:43:22 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:43:22 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 12:50:25 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 12:50:26 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 8848 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 12:50:26 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 12:50:26 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.971 seconds (process running for 1.787)
+[2024-12-30 12:50:26 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 12:50:26 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@42c12b3e
+[2024-12-30 12:50:26 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 12:50:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pic
+        WHERE feed_id = 1
+ {executed in 0 msec}
+[2024-12-30 12:50:27 INFO Test worker] [jdbc.resultsettable] 
+|----|
+|pic |
+|----|
+|----|
+
+[2024-12-30 12:50:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            1, 'a.jpg'
+         ),( 
+            1, 'b.jpg'
+         ),( 
+            1, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 12:50:27 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pic
+        WHERE feed_id = 1
+ {executed in 0 msec}
+[2024-12-30 12:50:27 INFO Test worker] [jdbc.resultsettable] 
+|------|
+|pic   |
+|------|
+|a.jpg |
+|b.jpg |
+|c.jpg |
+|------|
+
+[2024-12-30 12:50:27 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 12:50:27 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:18:07 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:18:07 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 9652 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:18:07 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:18:08 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.932 seconds (process running for 1.798)
+[2024-12-30 13:18:08 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:18:08 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6d7ad0f5
+[2024-12-30 13:18:08 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:18:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 1
+ {executed in 0 msec}
+[2024-12-30 13:18:08 INFO Test worker] [jdbc.resultsettable] 
+|--------|----|-----------|
+|feed_id |pic |created_at |
+|--------|----|-----------|
+|--------|----|-----------|
+
+[2024-12-30 13:18:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            1, 'a.jpg'
+         ),( 
+            1, 'b.jpg'
+         ),( 
+            1, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 13:18:08 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 1
+ {executed in 0 msec}
+[2024-12-30 13:18:08 INFO Test worker] [jdbc.resultsettable] 
+|--------|------|--------------------|
+|feed_id |pic   |created_at          |
+|--------|------|--------------------|
+|1       |a.jpg |2024-12-30 13:18:08 |
+|1       |b.jpg |2024-12-30 13:18:08 |
+|1       |c.jpg |2024-12-30 13:18:08 |
+|--------|------|--------------------|
+
+[2024-12-30 13:18:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:18:08 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:27:36 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:27:36 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 7124 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:27:36 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:27:37 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.956 seconds (process running for 1.804)
+[2024-12-30 13:27:37 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:27:37 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@34279b8a
+[2024-12-30 13:27:37 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:27:37 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 1
+ {executed in 0 msec}
+[2024-12-30 13:27:37 INFO Test worker] [jdbc.resultsettable] 
+|--------|----|-----------|
+|feed_id |pic |created_at |
+|--------|----|-----------|
+|--------|----|-----------|
+
+[2024-12-30 13:27:38 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            1, 'a.jpg'
+         ),( 
+            1, 'b.jpg'
+         ),( 
+            1, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 13:27:38 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 1
+ {executed in 0 msec}
+[2024-12-30 13:27:38 INFO Test worker] [jdbc.resultsettable] 
+|--------|------|--------------------|
+|feed_id |pic   |created_at          |
+|--------|------|--------------------|
+|1       |a.jpg |2024-12-30 13:27:38 |
+|1       |b.jpg |2024-12-30 13:27:38 |
+|1       |c.jpg |2024-12-30 13:27:38 |
+|--------|------|--------------------|
+
+[2024-12-30 13:27:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:27:38 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:29:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:29:05 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 10264 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:29:05 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:29:05 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.938 seconds (process running for 1.798)
+[2024-12-30 13:29:05 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:29:05 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@11e9ac24
+[2024-12-30 13:29:05 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:29:06 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:29:06 INFO Test worker] [jdbc.resultsettable] 
+|--------|----|-----------|
+|feed_id |pic |created_at |
+|--------|----|-----------|
+|--------|----|-----------|
+
+[2024-12-30 13:29:06 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            5, 'a.jpg'
+         ),( 
+            5, 'b.jpg'
+         ),( 
+            5, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 13:29:06 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:29:06 INFO Test worker] [jdbc.resultsettable] 
+|--------|------|--------------------|
+|feed_id |pic   |created_at          |
+|--------|------|--------------------|
+|5       |a.jpg |2024-12-30 13:29:06 |
+|5       |b.jpg |2024-12-30 13:29:06 |
+|5       |c.jpg |2024-12-30 13:29:06 |
+|--------|------|--------------------|
+
+[2024-12-30 13:29:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:29:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:30:24 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:30:24 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 10876 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:30:24 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:30:24 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.938 seconds (process running for 1.767)
+[2024-12-30 13:30:24 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:30:25 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@64656b9e
+[2024-12-30 13:30:25 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:30:25 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:30:25 INFO Test worker] [jdbc.resultsettable] 
+|--------|----|-----------|
+|feed_id |pic |created_at |
+|--------|----|-----------|
+|--------|----|-----------|
+
+[2024-12-30 13:30:25 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            5, 'a.jpg'
+         ),( 
+            5, 'b.jpg'
+         ),( 
+            5, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 13:30:25 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:30:25 INFO Test worker] [jdbc.resultsettable] 
+|--------|------|--------------------|
+|feed_id |pic   |created_at          |
+|--------|------|--------------------|
+|5       |a.jpg |2024-12-30 13:30:25 |
+|5       |b.jpg |2024-12-30 13:30:25 |
+|5       |c.jpg |2024-12-30 13:30:25 |
+|--------|------|--------------------|
+
+[2024-12-30 13:30:25 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:30:25 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:31:05 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:31:05 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 10596 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:31:05 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:31:05 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.943 seconds (process running for 1.78)
+[2024-12-30 13:31:05 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:31:05 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@34279b8a
+[2024-12-30 13:31:05 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:31:06 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:31:06 INFO Test worker] [jdbc.resultsettable] 
+|--------|----|-----------|
+|feed_id |pic |created_at |
+|--------|----|-----------|
+|--------|----|-----------|
+
+[2024-12-30 13:31:06 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            5, 'a.jpg'
+         ),( 
+            5, 'b.jpg'
+         ),( 
+            5, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 13:31:06 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:31:06 INFO Test worker] [jdbc.resultsettable] 
+|--------|------|--------------------|
+|feed_id |pic   |created_at          |
+|--------|------|--------------------|
+|5       |a.jpg |2024-12-30 13:31:06 |
+|5       |b.jpg |2024-12-30 13:31:06 |
+|5       |c.jpg |2024-12-30 13:31:06 |
+|--------|------|--------------------|
+
+[2024-12-30 13:31:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:31:06 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:31:42 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:31:42 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 7704 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:31:42 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:31:42 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.928 seconds (process running for 1.782)
+[2024-12-30 13:31:42 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:31:42 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@37c7766e
+[2024-12-30 13:31:42 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:31:43 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 16 msec}
+[2024-12-30 13:31:43 INFO Test worker] [jdbc.resultsettable] 
+|--------|----|-----------|
+|feed_id |pic |created_at |
+|--------|----|-----------|
+|--------|----|-----------|
+
+[2024-12-30 13:31:43 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            5, 'a.jpg'
+         ),( 
+            5, 'b.jpg'
+         ),( 
+            5, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 13:31:43 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT *FROM feed_pic WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:31:43 INFO Test worker] [jdbc.resultsettable] 
+|--------|------|--------------------|
+|feed_id |pic   |created_at          |
+|--------|------|--------------------|
+|5       |a.jpg |2024-12-30 13:31:43 |
+|5       |b.jpg |2024-12-30 13:31:43 |
+|5       |c.jpg |2024-12-30 13:31:43 |
+|--------|------|--------------------|
+
+[2024-12-30 13:31:43 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:31:43 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:32:43 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:32:43 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 10664 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:32:43 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:32:44 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.948 seconds (process running for 1.761)
+[2024-12-30 13:32:44 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:32:44 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@30abf79c
+[2024-12-30 13:32:44 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:32:45 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:32:45 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-12-30 13:36:43 INFO background-preinit] [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-30 13:36:43 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Starting FeedPicMapperTest using Java 17.0.12 with PID 6600 (started by Administrator in D:\LJM\GreenGramTdd)
+[2024-12-30 13:36:43 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] The following 1 profile is active: "test"
+[2024-12-30 13:36:44 INFO Test worker] [com.green.greengram.feed.FeedPicMapperTest] Started FeedPicMapperTest in 0.945 seconds (process running for 1.778)
+[2024-12-30 13:36:44 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2024-12-30 13:36:44 INFO Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@251c90f
+[2024-12-30 13:36:44 INFO Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2024-12-30 13:36:45 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pic
+        WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:36:45 INFO Test worker] [jdbc.resultsettable] 
+|----|
+|pic |
+|----|
+|----|
+
+[2024-12-30 13:36:45 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. INSERT INTO feed_pic
+        (feed_id, pic)
+        VALUES
+         (  
+            5, 'a.jpg'
+         ),( 
+            5, 'b.jpg'
+         ),( 
+            5, 'c.jpg'
+         )
+ {executed in 0 msec}
+[2024-12-30 13:36:45 DEBUGTest worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pic
+        WHERE feed_id = 5
+ {executed in 0 msec}
+[2024-12-30 13:36:45 INFO Test worker] [jdbc.resultsettable] 
+|------|
+|pic   |
+|------|
+|a.jpg |
+|b.jpg |
+|c.jpg |
+|------|
+
+[2024-12-30 13:36:45 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2024-12-30 13:36:45 INFO SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
