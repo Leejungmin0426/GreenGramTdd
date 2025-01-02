@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 public class UserFollowServiceTest {
         @InjectMocks // 시제품(Mock-목업할 때 목)을 inject할 거다.
-    UserFollowService userFollowService; // Mockito가 객체화 해 줌
+    UserFollowService userFollowService; // Mockito가 객체화를 직접 해 줌
 
     @Mock
     UserFollowMapper userFollowMapper;
@@ -34,25 +34,23 @@ public class UserFollowServiceTest {
     static final long toUserId4 = 4L;
 
 
-    static final UserFollowReq userFollowReq1_2 = new UserFollowReq(toUserId2);
-    static final UserFollowReq userFollowReq3_4 = new UserFollowReq(toUserId4);
 
     @Test
     @DisplayName("postUserFollow 테스트")
     void postUserFollow() {
         //given
         //authenticationFacade Mock객체의 getSignedUserId()메소드를 호출하면 willReturn값이 리턴이 되게끔 세팅
-        final int EXPECTED_RESULT = 14; // 검증 시 뜬금없는 값 넣는 게 좋다. 검증이 더욱 정교해 짐.. 13같은
-        final long FORM_USER_ID = fromUserId3;
-        final long TO_USER_ID = toUserId4;
-        given(authenticationFacade.getSignedUserId()).willReturn(FORM_USER_ID);
+        final int EXPECTED_RESULT = 13; // 검증 시 뜬금없는 값 넣는 게 좋다. 검증이 더욱 정교해 짐.. 13같은
+        final long EXPECTED_FORM_USER_ID = fromUserId3;
+        final long EXPECTED_TO_USER_ID = toUserId4;
+        given(authenticationFacade.getSignedUserId()).willReturn(EXPECTED_FORM_USER_ID);// authenticationFacadedi, getSignedUserId 값이 호출당하면, 리턴해야 한다~ FromUserId로 (final long FORM_USER_ID = fromUserId3;)
 
-        UserFollowReq givenParam = new UserFollowReq(TO_USER_ID);
-        givenParam.setFromUserId(FORM_USER_ID);
+        UserFollowReq givenParam = new UserFollowReq(EXPECTED_TO_USER_ID);
+        givenParam.setFromUserId(EXPECTED_FORM_USER_ID);
         given(userFollowMapper.deleteUserFollow(givenParam)).willReturn(EXPECTED_RESULT);
 
         //when
-        UserFollowReq actualParam = new UserFollowReq(TO_USER_ID);
+        UserFollowReq actualParam = new UserFollowReq(EXPECTED_TO_USER_ID);
         int actualResult = userFollowService.deleteUserFollow(actualParam);
 
         //then

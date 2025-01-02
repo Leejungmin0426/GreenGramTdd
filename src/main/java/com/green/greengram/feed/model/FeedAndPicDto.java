@@ -1,11 +1,13 @@
 package com.green.greengram.feed.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@EqualsAndHashCode
 public class FeedAndPicDto {
     private long feedId;
     private String contents;

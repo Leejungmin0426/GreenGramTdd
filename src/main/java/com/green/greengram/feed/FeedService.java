@@ -1,5 +1,7 @@
 package com.green.greengram.feed;
 
+import com.green.greengram.common.exception.CustomException;
+import com.green.greengram.common.exception.FeedErrorCode;
 import com.green.greengram.common.model.MyFileUtils;
 import com.green.greengram.config.security.AuthenticationFacade;
 import com.green.greengram.feed.comment.FeedCommentMapper;
@@ -10,11 +12,13 @@ import com.green.greengram.feed.like.model.FeedLikeReq;
 import com.green.greengram.feed.like.model.FeedLikeRes;
 import com.green.greengram.feed.model.*;
 import jakarta.validation.Valid;
+import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -25,6 +29,7 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@Validated
 public class FeedService {
     private final FeedMapper feedMapper;
     private final FeedPicMapper feedPicMapper;
@@ -40,7 +45,9 @@ public class FeedService {
 
         p.setWriterUserId(authenticationFacade.getSignedUserId());
         int result = feedMapper.insFeed(p);
-
+        if(result == 0) {
+            throw new CustomException(FeedErrorCode.FAIL_TO_REG);
+        }
         // --------------- 파일 등록
         long feedId = p.getFeedId();
 
@@ -58,7 +65,9 @@ public class FeedService {
             try {
                 myFileUtils.transferTo(pic, filePath);
             } catch (IOException e) {
-                e.printStackTrace();
+                String delFolderPath = String.format("%s/%s", myFileUtils.getUploadPath(), middlePath);
+                myFileUtils.deleteFolder(delFolderPath, true);
+                throw new CustomException(FeedErrorCode.FAIL_TO_REG);
             }
         }
         FeedPicDto feedPicDto = new FeedPicDto();

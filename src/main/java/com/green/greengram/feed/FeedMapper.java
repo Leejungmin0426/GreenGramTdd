@@ -3,10 +3,12 @@ package com.green.greengram.feed;
 import com.green.greengram.feed.comment.model.FeedCommentDto;
 import com.green.greengram.feed.model.*;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
 @Mapper
+@Validated
 public interface FeedMapper {
     int insFeed (FeedPostReq p);
 

@@ -3,6 +3,7 @@ package com.green.greengram.feed;
 import com.green.greengram.common.ResultResponse;
 import com.green.greengram.feed.model.*;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -16,8 +17,9 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("feed")
 @RequiredArgsConstructor
+@RequestMapping("feed")
+@Tag(name = "2. 피드", description = "피드 관리")
 public class FeedController {
     private final FeedService service;
 

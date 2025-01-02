@@ -1,6 +1,7 @@
 package com.green.greengram.feed.model;
 
 import com.green.greengram.feed.comment.model.FeedCommentDto;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Setter
 @Getter
+@EqualsAndHashCode
 public class FeedWithPicCommentDto {
     private long feedId;
     private String contents;
