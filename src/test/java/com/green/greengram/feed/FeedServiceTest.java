@@ -102,7 +102,47 @@ class FeedServiceTest {
     }
 
 
+    @Test
+    @DisplayName("test2과 같은 맥락. 파일을 2개로 테스트 함.")
+    void test2_1() throws Exception {
+        given(authenticationFacade.getSignedUserId()).willReturn(SIGNED_USER_ID);
 
+        FeedPostReq givenParam = new FeedPostReq();
+        givenParam.setWriterUserId(SIGNED_USER_ID);
+        givenParam.setLocation(LOCATION);
+        given(feedMapper.insFeed(givenParam)).will(invocation -> {
+            FeedPostReq invocationParam = (FeedPostReq) invocation.getArgument(0);
+            invocationParam.setFeedId(FEED_ID_10);
+            return 1;
+        });
+        final String SAVED_PIC_NAME_1 = "abc.jpg";
+        final String SAVED_PIC_NAME_2 = "def.jpg";
+        MultipartFile mpf1 = new MockMultipartFile("pics", "test1.txt", "text/plain", "This is test1 file".getBytes());
+        MultipartFile mpf2 = new MockMultipartFile("pics", "test2.txt", "text/plain", "This is test2 file".getBytes());
+        given(myFileUtils.makeRandomFileName(mpf1)).willReturn(SAVED_PIC_NAME_1);
+        given(myFileUtils.makeRandomFileName(mpf2)).willReturn(SAVED_PIC_NAME_2);
+
+        String expectedMiddlePath = String.format("feed/%d", FEED_ID_10);
+        String givenFilePath1 = String.format("%s/%s", expectedMiddlePath, SAVED_PIC_NAME_1);
+        String givenFilePath2 = String.format("%s/%s", expectedMiddlePath, SAVED_PIC_NAME_2);
+
+        doAnswer(invoctaion -> {
+            return null;
+        }).when(myFileUtils).transferTo(mpf1, givenFilePath1);
+
+        doAnswer(invoctaion -> {
+            throw new IOException();
+        }).when(myFileUtils).transferTo(mpf2, givenFilePath2);
+
+        List<MultipartFile> pics = new ArrayList<>(2);
+        pics.add(mpf1);
+        pics.add(mpf2);
+
+        FeedPostReq actualParam = new FeedPostReq();
+        actualParam.setLocation(LOCATION);
+        assertThrows(CustomException.class, () -> feedService.postFeed(pics, actualParam));
+        verify(myFileUtils).makeFolders(expectedMiddlePath); //verify는 메소드가 원하는 파라미터로 호출되었는지 확인할 수 있다.
+    }
 
 
     @Test
